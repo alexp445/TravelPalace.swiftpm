@@ -3,10 +3,17 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            Text("Welcome to")
+                .font(.largeTitle)
+                Spacer()
+            
+            Text("Travel Palace")
+                .font(.custom("HelveticaNeue-Bold", size: 50))
+                .frame(maxHeight: .infinity, alignment: .top)
+            
+           
+                
+            
         }
     }
 }
