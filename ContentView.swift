@@ -14,6 +14,19 @@ struct ContentView: View {
             
         }
         NavigationStack{
+           
+            Button(action: {
+                print("Map tapped")
+            }) {
+                Text("Map")
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+                    .frame(maxWidth: .infinity, minHeight: 500)
+                    .background(Color.blue)
+                    .foregroundColor(.white)
+                    .cornerRadius(20)
+                    .padding()
+            }
             
         }
     }
