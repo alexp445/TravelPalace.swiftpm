@@ -10,16 +10,16 @@ struct ContentView: View {
                 Text("Travel Palace")
                     .font(.custom("HelveticaNeue-Bold", size: 50))
                     .frame(alignment: .top)
-                                
+                
                 NavigationLink(destination: MapView()) {
                     
-                        Text("See Map")
-                            .font(.largeTitle)
-                            .fontWeight(.bold)
-                            .frame(maxWidth: .infinity, minHeight: 100)
-                            .background(Color.blue)
-                            .foregroundColor(.white)
-                            .cornerRadius(20)
+                    Text("See Map")
+                        .font(.largeTitle)
+                        .fontWeight(.bold)
+                        .frame(maxWidth: .infinity, minHeight: 100)
+                        .background(Color.blue)
+                        .foregroundColor(.white)
+                        .cornerRadius(20)
                 }
             }
         }
