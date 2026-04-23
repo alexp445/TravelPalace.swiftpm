@@ -23,6 +23,7 @@ struct ContentView: View {
                         .foregroundColor(.white)
                         .cornerRadius(20)
                 }
+                
             }
             
         }
