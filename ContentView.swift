@@ -1,7 +1,9 @@
 import SwiftUI
 
 struct ContentView: View {
+    
     var body: some View {
+        
         NavigationStack{
             VStack {
                 Text("Welcome to")
@@ -22,6 +24,10 @@ struct ContentView: View {
                         .cornerRadius(20)
                 }
             }
+            
         }
+        
+
     }
+    
 }
