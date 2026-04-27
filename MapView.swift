@@ -25,7 +25,7 @@ struct MapView: View {
             }
             
             NavigationLink(destination: Overview()) {
-                Text("go to overview")
+                Text("View Overview")
             }
         }
     }
