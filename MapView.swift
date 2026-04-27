@@ -45,6 +45,17 @@ struct MapView: View {
                     
                 }
                 
+                .toolbar {
+                    ToolbarItem(placement: .automatic) {
+                        TextField("Search Your Vacation", text: $address)
+                        
+                    }
+                    
+                }
+            }
+            
+            NavigationLink(destination: Overview()) {
+                Text("View Overview")
             }
             
         }
