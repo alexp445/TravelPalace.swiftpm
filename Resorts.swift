@@ -13,8 +13,7 @@ struct Resorts: View {
                     .foregroundColor(.white)
                     .cornerRadius(20)
             }
-        } else {
-            // Fallback on earlier versions
+            
         }
     }
 }
