@@ -30,6 +30,9 @@ let package = Package(
                 .landscapeRight,
                 .landscapeLeft,
                 .portraitUpsideDown(.when(deviceFamilies: [.pad]))
+            ],
+            capabilities: [
+                .locationWhenInUse(purposeString: "Travel Palace Wants To Use Your Location")
             ]
         )
     ],

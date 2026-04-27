@@ -1,5 +1,6 @@
 import SwiftUI
 
+@available(iOS 17.0, *)
 struct FinishView: View {
     var body: some View {
         NavigationStack{
