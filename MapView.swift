@@ -35,10 +35,12 @@ struct MapView: View {
                                 .clipShape(Circle())
                                 .foregroundStyle(.gray)
                         }
+                        NavigationLink(destination: Overview()) {
+                            Text("View Overview")
+                        }
                     }
                 }
             }
-            
             .toolbar {
                 ToolbarItem(placement: .automatic) {
                     TextField("Search Your Vacation", text: $address)
@@ -51,12 +53,9 @@ struct MapView: View {
                         
                     }
                     
-    
             }
             
-            NavigationLink(destination: Overview()) {
-                Text("View Overview")
-            }
+            
             
         }
         
