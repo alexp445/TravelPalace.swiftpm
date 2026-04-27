@@ -3,7 +3,7 @@ struct Resorts: View {
     var body: some View {
         Text("Hello")
         if #available(iOS 17.0, *) {
-            NavigationLink(destination: ContentView()) {
+            NavigationLink(destination: FinishView()) {
                 
                 Text("Finish")
                     .font(.largeTitle)
