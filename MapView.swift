@@ -63,10 +63,7 @@ struct MapView: View {
                 }
                 
                 
-                ToolbarItem(placement: .automatic) {
-                    TextField("Search Your Vacation", text: $address)
-                    
-                }
+                
                 
             }
             
