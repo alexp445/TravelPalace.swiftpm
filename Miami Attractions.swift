@@ -3,8 +3,8 @@ struct Attractions: View {
     var body: some View {
         VStack{
             
-            Text("City Attractions:")
-                .font(.custom("HelveticaNeue-Bold", size: 50))
+            Text("Miami Attractions:")
+                .font(.custom("HelveticaNeue-Bold", size: 45))
                 .frame(alignment: .top)
             
             Image("MiamiBeach")
