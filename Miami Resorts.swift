@@ -2,12 +2,12 @@ import SwiftUI
 struct Resorts: View {
     var body: some View {
         VStack{
-            Text("Resorts/Hotels:")
-                .font(.custom("HelveticaNeue-Bold", size: 45))
+            Text("Miami Resorts/Hotels:")
+                .font(.custom("HelveticaNeue-Bold", size: 35))
                 .frame(alignment: .top)
                 .padding(10)
             
-            
+            Divider()
             
             Image("faena")
                 .resizable()
