@@ -7,7 +7,7 @@ struct Resorts: View {
                 .frame(alignment: .top)
                 .padding(10)
             
-            
+            Divider()
             
             Image("faena")
                 .resizable()

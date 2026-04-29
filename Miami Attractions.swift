@@ -7,6 +7,8 @@ struct Attractions: View {
                 .font(.custom("HelveticaNeue-Bold", size: 45))
                 .frame(alignment: .top)
             
+            Divider()
+            
             Image("MiamiBeach")
                 .resizable()
                 .frame(width: 150, height: 150)
