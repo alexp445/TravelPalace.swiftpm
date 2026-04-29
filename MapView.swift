@@ -6,7 +6,7 @@ struct MapView: View {
     @State var cameraPosition: MapCameraPosition = .region(
         MKCoordinateRegion(
             center: CLLocationCoordinate2D(latitude: 0, longitude: 0),
-            span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
+            span: MKCoordinateSpan(latitudeDelta: 100, longitudeDelta: 100)
         )
     )
     @State var myManager = LocationManager()
