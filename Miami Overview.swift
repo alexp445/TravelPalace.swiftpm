@@ -14,7 +14,7 @@ struct MiamiOverview: View {
             
             
             Spacer()
-            NavigationLink(destination: Attractions()) {
+            NavigationLink(destination: MiamiAttractions()) {
                 
                 Text("See Attractions")
                     .font(.largeTitle)

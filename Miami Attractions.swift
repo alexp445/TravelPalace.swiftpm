@@ -25,7 +25,7 @@ struct  MiamiAttractions: View {
             
             
             Spacer()
-            NavigationLink(destination: Resorts()) {
+            NavigationLink(destination: MiamiResorts()) {
                 
                 Text("See Resorts/Hotels")
                     .font(.largeTitle)
