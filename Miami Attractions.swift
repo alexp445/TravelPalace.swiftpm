@@ -1,5 +1,5 @@
 import SwiftUI
-struct Attractions: View {
+struct  MiamiAttractions: View {
     var body: some View {
         VStack{
             
