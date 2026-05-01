@@ -5,6 +5,7 @@ struct City: Identifiable {
     let id = UUID()
     let name: String
     let coordinate: CLLocationCoordinate2D
+    let description: String
 }
 @available(iOS 17.0, *)
 struct MapView: View {
@@ -16,13 +17,14 @@ struct MapView: View {
         )
     )
     let locations = [
-        City(name: "Miami", coordinate: CLLocationCoordinate2D(latitude: 25.7617, longitude: -80.1918)),
-        City(name: "Dubai", coordinate: CLLocationCoordinate2D(latitude: 25.2048, longitude: 55.2708)),
-        City(name: "London", coordinate: CLLocationCoordinate2D(latitude: 51.5074, longitude: -0.1278))
-    ]
+        City(name: "Miami", coordinate: CLLocationCoordinate2D(latitude: 25.7617, longitude: -80.1918), description: "Beautiful beaches and Art Deco."),
+            City(name: "Dubai", coordinate: CLLocationCoordinate2D(latitude: 25.2048, longitude: 55.2708), description: "Luxury shopping and ultramodern architecture."),
+            City(name: "London", coordinate: CLLocationCoordinate2D(latitude: 51.5074, longitude: -0.1278), description: "Rich history and iconic landmarks.")
+        ]
     @State var myManager = LocationManager()
     @State var zoomLevel: Double = 0.05
     @State var userCenter = CLLocationCoordinate2D(latitude: 37.33, longitude: -122.03)
+    @State private var selectedCity: City?
     var body: some View {
         NavigationView {
             VStack{
@@ -36,7 +38,7 @@ struct MapView: View {
                                     .font(.title)
                                     .foregroundStyle(.red)
                                     .onTapGesture {
-                                        print("Tapped on \(city.name)")
+                                        selectedCity = city
                                     }
                             }
                         }
@@ -69,6 +71,11 @@ struct MapView: View {
                                 .clipShape(Circle())
                                 .foregroundStyle(.gray)
                         }
+                     
+                            .sheet(item: $selectedCity) { city in
+                                CityPageView (city: city)
+                            }
+                        
                         NavigationLink(destination: Overview()) {
                             Text("View Overview")
                                 .padding()
@@ -101,6 +108,48 @@ struct MapView: View {
                     span: MKCoordinateSpan(latitudeDelta: zoomLevel, longitudeDelta: zoomLevel)
                 )
             )
+        }
+    }
+}
+@available(iOS 17.0, *)
+struct CityPageView: View {
+    let city: City
+    
+    var body: some View {
+        NavigationStack {
+            VStack(spacing: 20) {
+                Capsule()
+                    .frame(width: 40, height: 6)
+                    .foregroundStyle(.secondary)
+                    .padding(.top, 10)
+                
+                Text(city.name)
+                    .font(.largeTitle)
+                    .bold()
+                
+
+                Text(city.description)
+                    .multilineTextAlignment(.center)
+                    .padding(.horizontal)
+                
+                Divider()
+                
+              
+                VStack(spacing: 15) {
+                    NavigationLink("View Resorts"){
+                        
+                    }
+                    
+                    NavigationLink("View Resorts") {
+                        
+                    }
+                }
+                .buttonStyle(.borderedProminent)
+                
+                Spacer()
+            }
+            .navigationTitle("City Guide")
+            .navigationBarTitleDisplayMode(.inline)
         }
     }
 }
