@@ -76,7 +76,7 @@ struct MapView: View {
                                 CityPageView (city: city)
                             }
                         
-                        NavigationLink(destination: Overview()) {
+                        NavigationLink(destination: MiamiOverview()) {
                             Text("View Overview")
                                 .padding()
                                 .foregroundStyle(.blue)
