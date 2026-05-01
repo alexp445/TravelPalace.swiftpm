@@ -140,7 +140,7 @@ struct CityPageView: View {
                         
                     }
                     
-                    NavigationLink("View Resorts") {
+                    NavigationLink("View Attractions") {
                         
                     }
                 }
