@@ -1,5 +1,5 @@
 import SwiftUI
-struct Attractions: View {
+struct  MiamiAttractions: View {
     var body: some View {
         VStack{
             
@@ -25,7 +25,7 @@ struct Attractions: View {
             
             
             Spacer()
-            NavigationLink(destination: Resorts()) {
+            NavigationLink(destination: MiamiResorts()) {
                 
                 Text("See Resorts/Hotels")
                     .font(.largeTitle)

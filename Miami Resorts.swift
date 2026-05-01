@@ -1,5 +1,5 @@
 import SwiftUI
-struct Resorts: View {
+struct MiamiResorts: View {
     var body: some View {
         VStack{
             Text("Miami Resorts/Hotels:")
