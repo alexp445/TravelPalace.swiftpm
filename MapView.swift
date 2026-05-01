@@ -6,6 +6,9 @@ struct City: Identifiable {
     let name: String
     let coordinate: CLLocationCoordinate2D
     let description: String
+    let descriptionPage: AnyView
+    let attractionsPage: AnyView
+    let resortsPage: AnyView
 }
 @available(iOS 17.0, *)
 struct MapView: View {
@@ -17,10 +20,27 @@ struct MapView: View {
         )
     )
     let locations = [
-        City(name: "Miami", coordinate: CLLocationCoordinate2D(latitude: 25.7617, longitude: -80.1918), description: "Beautiful beaches and Art Deco."),
-            City(name: "Dubai", coordinate: CLLocationCoordinate2D(latitude: 25.2048, longitude: 55.2708), description: "Luxury shopping and ultramodern architecture."),
-            City(name: "London", coordinate: CLLocationCoordinate2D(latitude: 51.5074, longitude: -0.1278), description: "Rich history and iconic landmarks.")
-        ]
+        City(name: "Miami",
+             coordinate: CLLocationCoordinate2D(latitude: 25.7617, longitude: -80.1918),
+             description: "Beaches and Art Deco.",
+             descriptionPage: AnyView(MiamiOverview()), // Your Miami page
+             attractionsPage: AnyView(MiamiAttractions()), // Your Miami page
+             resortsPage: AnyView(MiamiResorts())),       // Your Miami page
+        
+        City(name: "Dubai",
+             coordinate: CLLocationCoordinate2D(latitude: 25.2048, longitude: 55.2708),
+             description: "Luxury and Skyscrapers.",
+             descriptionPage: AnyView(DubaiOverview()),
+             attractionsPage: AnyView(DubaiAttractions()),
+             resortsPage: AnyView(DubaiResorts())),
+        
+        City(name: "London",
+             coordinate: CLLocationCoordinate2D(latitude: 51.5074, longitude: -0.1278),
+             description: "History and Icons.",
+             descriptionPage: AnyView(LondonOverview()),
+             attractionsPage: AnyView(LondonAttractions()),
+             resortsPage: AnyView(LondonResorts()))
+    ]
     @State var myManager = LocationManager()
     @State var zoomLevel: Double = 0.05
     @State var userCenter = CLLocationCoordinate2D(latitude: 37.33, longitude: -122.03)
@@ -32,7 +52,7 @@ struct MapView: View {
                     Map(position: $cameraPosition){
                         UserAnnotation()
                         ForEach(locations) { city in
-                            Annotation(city.name, coordinate: city.coordinate) {
+                            Annotation(city!.name, coordinate: city!.coordinate) {
                                 
                                 Image(systemName: "mappin.circle.fill")
                                     .font(.title)
@@ -71,18 +91,11 @@ struct MapView: View {
                                 .clipShape(Circle())
                                 .foregroundStyle(.gray)
                         }
-                     
-                            .sheet(item: $selectedCity) { city in
-                                CityPageView (city: city)
-                            }
                         
-                        NavigationLink(destination: Overview()) {
-                            Text("View Overview")
-                                .padding()
-                                .foregroundStyle(.blue)
-                                .background(.regularMaterial)
-                                .clipShape(RoundedRectangle(cornerRadius: 20))
+                        .sheet(item: $selectedCity) { city in
+                            CityPageView (city: city)
                         }
+                        
                     }
                 }
             }
@@ -127,22 +140,18 @@ struct CityPageView: View {
                     .font(.largeTitle)
                     .bold()
                 
-
+                
                 Text(city.description)
                     .multilineTextAlignment(.center)
                     .padding(.horizontal)
                 
                 Divider()
                 
-              
-                VStack(spacing: 15) {
-                    NavigationLink("View Resorts"){
-                        
-                    }
-                    
-                    NavigationLink("View Resorts") {
-                        
-                    }
+                
+                VStack() {
+                    NavigationLink("Detailed Description") { city.descriptionPage }
+                    NavigationLink("View Attractions") { city.attractionsPage }
+                    NavigationLink("View Resorts") { city.resortsPage }
                 }
                 .buttonStyle(.borderedProminent)
                 
