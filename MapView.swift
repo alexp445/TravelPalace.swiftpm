@@ -150,7 +150,11 @@ struct CityPageView: View {
                 VStack() {
                     NavigationLink("Detailed Description") { city.descriptionPage }
                     NavigationLink("View Attractions") { city.attractionsPage }
-                    NavigationLink("View Resorts") { city.resortsPage }
+                    NavigationLink("View Resorts") {
+                        city.resortsPage }
+                    NavigationLink("Go To Finish") {
+                        FinishView()
+                    }
                 }
                 .buttonStyle(.borderedProminent)
                 
