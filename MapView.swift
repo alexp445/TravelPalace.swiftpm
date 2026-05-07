@@ -23,9 +23,8 @@ struct MapView: View {
         City(name: "Miami",
              coordinate: CLLocationCoordinate2D(latitude: 25.7617, longitude: -80.1918),
              description: "Beaches and Art Deco.",
-             descriptionPage: AnyView(MiamiOverview()), // Your Miami page
-             attractionsPage: AnyView(MiamiAttractions()), // Your Miami page
-             resortsPage: AnyView(MiamiResorts())),       // Your Miami page
+             descriptionPage: AnyView(MiamiOverview()),             attractionsPage: AnyView(MiamiAttractions()),
+             resortsPage: AnyView(MiamiResorts())),
         
         City(name: "Dubai",
              coordinate: CLLocationCoordinate2D(latitude: 25.2048, longitude: 55.2708),
