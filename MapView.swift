@@ -52,7 +52,7 @@ struct MapView: View {
                     Map(position: $cameraPosition){
                         UserAnnotation()
                         ForEach(locations) { city in
-                            Annotation(city!.name, coordinate: city!.coordinate) {
+                            Annotation(city.name, coordinate: city.coordinate) {
                                 
                                 Image(systemName: "mappin.circle.fill")
                                     .font(.title)
