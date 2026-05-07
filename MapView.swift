@@ -48,7 +48,7 @@ struct MapView: View {
         NavigationView {
             VStack{
                 ZStack(alignment: .bottomTrailing){
-                    Map(position: $cameraPosition){
+                    Map(position: $cameraPosition, interactionModes: .pan){
                         UserAnnotation()
                         ForEach(locations) { city in
                             Annotation(city.name, coordinate: city.coordinate) {
