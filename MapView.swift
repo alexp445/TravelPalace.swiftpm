@@ -41,7 +41,7 @@ struct MapView: View {
              resortsPage: AnyView(LondonResorts()))
     ]
     @State var myManager = LocationManager()
-    @State var zoomLevel: Double = 0.05
+    @State var zoomLevel: Double = 120.0
     @State var userCenter = CLLocationCoordinate2D(latitude: 37.33, longitude: -122.03)
     @State private var selectedCity: City?
     var body: some View {
