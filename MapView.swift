@@ -41,14 +41,14 @@ struct MapView: View {
              resortsPage: AnyView(LondonResorts()))
     ]
     @State var myManager = LocationManager()
-    @State var zoomLevel: Double = 0.05
+    @State var zoomLevel: Double = 120.0
     @State var userCenter = CLLocationCoordinate2D(latitude: 37.33, longitude: -122.03)
     @State private var selectedCity: City?
     var body: some View {
         NavigationView {
             VStack{
                 ZStack(alignment: .bottomTrailing){
-                    Map(position: $cameraPosition){
+                    Map(position: $cameraPosition, interactionModes: .pan){
                         UserAnnotation()
                         ForEach(locations) { city in
                             Annotation(city.name, coordinate: city.coordinate) {
@@ -150,7 +150,11 @@ struct CityPageView: View {
                 VStack() {
                     NavigationLink("Detailed Description") { city.descriptionPage }
                     NavigationLink("View Attractions") { city.attractionsPage }
-                    NavigationLink("View Resorts") { city.resortsPage }
+                    NavigationLink("View Resorts") {
+                        city.resortsPage }
+                    NavigationLink("Go To Finish") {
+                        FinishView()
+                    }
                 }
                 .buttonStyle(.borderedProminent)
                 
