@@ -2,7 +2,7 @@ import SwiftUI
 struct DubaiResorts: View {
     var body: some View {
         VStack{
-            Text("Miami Resorts/Hotels:")
+            Text("Dubai Resorts/Hotels:")
                 .font(.custom("HelveticaNeue-Bold", size: 35))
                 .frame(alignment: .top)
                 .padding(10)
