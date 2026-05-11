@@ -2,8 +2,8 @@ import SwiftUI
 struct DubaiOverview: View {
     var body: some View {
         VStack{
-            Text("Overview of City")
-                .font(.custom("HelveticaNeue-Bold", size: 45))
+            Text("Overview of Dubai:")
+                .font(.custom("HelveticaNeue-Bold", size: 42))
                 .frame(alignment: .top)
                 .padding(10)
             
