@@ -38,7 +38,28 @@ struct MapView: View {
              description: "History and Icons.",
              descriptionPage: AnyView(LondonOverview()),
              attractionsPage: AnyView(LondonAttractions()),
-             resortsPage: AnyView(LondonResorts()))
+             resortsPage: AnyView(LondonResorts())),
+        
+        City(name: "Rome",
+             coordinate: CLLocationCoordinate2D(latitude: 41.902782, longitude: 12.496366),
+             description: "Antiquity and Gastronomy.",
+             descriptionPage: AnyView(RomeOverview()),
+             attractionsPage: AnyView(RomeAttractions()),
+             resortsPage: AnyView(RomeResorts())),
+        
+        City(name: "Cancun",
+             coordinate: CLLocationCoordinate2D(latitude: 21.16101, longitude: 86.82563),
+             description: "Turquoise Waters and Ruins.",
+             descriptionPage: AnyView(CancunOverview()),
+             attractionsPage: AnyView(CancunAttractions()),
+             resortsPage: AnyView(CancunResorts())),
+        
+        City(name: "Tokyo",
+             coordinate: CLLocationCoordinate2D(latitude: 35.652832, longitude: 139.839478),
+             description: "Neon and Tradition.",
+             descriptionPage: AnyView(TokyoOverview()),
+             attractionsPage: AnyView(TokyoAttractions()),
+             resortsPage: AnyView(TokyoResorts()))
     ]
     @State var myManager = LocationManager()
     @State var zoomLevel: Double = 120.0
@@ -48,10 +69,10 @@ struct MapView: View {
         NavigationView {
             VStack{
                 ZStack(alignment: .bottomTrailing){
-                    Map(position: $cameraPosition, interactionModes: .pan){
+                    Map(position: $cameraPosition, interactionModes: .pan) {
                         UserAnnotation()
                         ForEach(locations) { city in
-                            Annotation(city.name, coordinate: city.coordinate) {
+                            Annotation(city?.name, coordinate: city.coordinate) {
                                 
                                 Image(systemName: "mappin.circle.fill")
                                     .font(.title)
