@@ -48,7 +48,7 @@ struct MapView: View {
              resortsPage: AnyView(RomeResorts())),
         
         City(name: "Cancun",
-             coordinate: CLLocationCoordinate2D(latitude: 21.16101, longitude: 86.82563),
+             coordinate: CLLocationCoordinate2D(latitude: 21.16101, longitude: -86.82563),
              description: "Turquoise Waters and Ruins.",
              descriptionPage: AnyView(CancunOverview()),
              attractionsPage: AnyView(CancunAttractions()),
@@ -72,7 +72,7 @@ struct MapView: View {
                     Map(position: $cameraPosition, interactionModes: .pan) {
                         UserAnnotation()
                         ForEach(locations) { city in
-                            Annotation(city?.name, coordinate: city.coordinate) {
+                            Annotation(city.name, coordinate: city.coordinate) {
                                 
                                 Image(systemName: "mappin.circle.fill")
                                     .font(.title)
