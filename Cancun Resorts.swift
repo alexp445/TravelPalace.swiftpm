@@ -3,26 +3,26 @@ struct CancunResorts: View {
     var body: some View {
         VStack{
             Text("Cancun Resorts/Hotels:")
-                .font(.custom("HelveticaNeue-Bold", size: 35))
+                .font(.custom("HelveticaNeue-Bold", size: 33))
                 .frame(alignment: .top)
                 .padding(10)
             
             Divider()
             
-            Image("")
+            Image("CancunResort")
                 .resizable()
                 .frame(width: 150, height: 150)
             
-            Text(".")
+            Text("Serene ocean views frame every moment at this luxurious beachfront sanctuary with multiple pools and attentive service. The exceptional spa offers rejuvenating treatments. Evenings unfold at three restaurants where chefs transform fresh ingredients into culinary masterpieces.")
             
             
             Divider()
             
-            Image("")
+            Image("CancunResorts")
                 .resizable()
                 .frame(width: 150, height: 150)
             
-            Text(".")
+            Text("This waterfront resort offers pristine white sand beaches with complimentary umbrellas and towels. The silky soft shore features calm blue waters perfect for swimming. Guests can enjoy beach volleyball or try nearby snorkeling and parasailing. The wide shoreline provides an ideal setting for beachside dining or elegant beach weddings.")
             
             
             
