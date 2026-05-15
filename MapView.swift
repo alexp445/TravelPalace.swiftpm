@@ -15,8 +15,8 @@ struct MapView: View {
     @State var address: String = ""
     @State var cameraPosition: MapCameraPosition = .region(
         MKCoordinateRegion(
-            center: CLLocationCoordinate2D(latitude: 25, longitude: 0),
-            span: MKCoordinateSpan(latitudeDelta: 120, longitudeDelta: 120)
+            center: CLLocationCoordinate2D(latitude: 20, longitude: 10),
+            span: MKCoordinateSpan(latitudeDelta: 140, longitudeDelta: 140)
         )
     )
     let locations = [
