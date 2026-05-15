@@ -9,19 +9,19 @@ struct FijiResorts: View {
             
             Divider()
             
-            Image("")
+            Image("FijiResort")
                 .resizable()
                 .frame(width: 150, height: 150)
             
-            Text(".")
+            Text("Castaway Island, 4-star Mamanuca private island resort featuring 66 traditional, TV-free beachfront bures. Perfect for families and couples alike, it offers four oceanfront restaurants, separate family and adultsv only pools, a free kids' club, and a day spa.")
             
             Divider()
                 
-            Image("")
+            Image("fijiResorts")
                 .resizable()
                 .frame(width: 150, height: 150)
             
-            Text(".")
+            Text("Near Port Denarau, Radisson Blu Resort Fiji Denarau Island provides a swim-up bar, a poolside bar, and a grocery/convenience store. With a private beach, beachfront dining, and beach massages, this resort is the perfect place to soak up some sun.")
             
             
             Spacer()
