@@ -8,7 +8,8 @@ struct DubaiResorts: View {
                 .padding(10)
             
             Divider()
-            
+            Text("Waldorf Astoria Dubai Palm Jumeirah Hotel")
+            .font(.largeTitle)
             Image("PalmHotel")
                 .resizable()
                 .frame(width: 150, height: 150)
@@ -18,7 +19,8 @@ struct DubaiResorts: View {
             
             
             Divider()
-            
+            Text("Atlantis, The Palm")
+            .font(.largeTitle)
             Image("Atlantis")
                 .resizable()
                 .frame(width: 150, height: 150)
