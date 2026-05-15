@@ -59,7 +59,25 @@ struct MapView: View {
              description: "Neon and Tradition.",
              descriptionPage: AnyView(TokyoOverview()),
              attractionsPage: AnyView(TokyoAttractions()),
-             resortsPage: AnyView(TokyoResorts()))
+             resortsPage: AnyView(TokyoResorts())),
+        City(name: "Fiji",
+             coordinate: CLLocationCoordinate2D(latitude: -18.141600, longitude: 178.441895),
+             description: "Tropical Palms and Coral.",
+             descriptionPage: AnyView(FijiOverview()),
+             attractionsPage: AnyView(FijiAttractions()),
+             resortsPage: AnyView(FijiResorts())),
+        City(name: "Rio De Janeiro",
+             coordinate: CLLocationCoordinate2D(latitude: -22.908333, longitude: -43.196388),
+             description: "Carnival and Mountains.",
+             descriptionPage: AnyView(RioOverview()),
+             attractionsPage: AnyView(RioAttractions()),
+             resortsPage: AnyView(RioResorts())),
+        City(name: "Beijing",
+             coordinate: CLLocationCoordinate2D(latitude: 39.916668, longitude: 116.383331),
+             description: "Dynasties and Grandeur.",
+             descriptionPage: AnyView(BeijingOverview()),
+             attractionsPage: AnyView(BeijingAttractions()),
+             resortsPage: AnyView(BeijingResorts()))
     ]
     @State var myManager = LocationManager()
     @State var zoomLevel: Double = 120.0
