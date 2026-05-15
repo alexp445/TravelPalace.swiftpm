@@ -8,22 +8,22 @@ struct BeijingResorts: View {
                 .frame(alignment: .top)
             
             Divider()
-            Text("")
-                .font(.title)
-            Image("")
+            
+            Image("Mandarin")
                 .resizable()
                 .frame(width: 150, height: 150)
             
-            Text(".")
+            Text("Mandarin Oriental Wangfujing Beijing Hotel. Located in the heart of the city's premier shopping district, this boutique-style hotel features some of the largest rooms in Beijing and a stunning rooftop terrace with direct views of the Forbidden City. It offers a perfect blend of modern luxury and intimate service, including a top-tier spa and refined dining options.")
+                .font(.custom("Italic Text", size: 15))
             
             Divider()
-            Text("")
-                .font(.title)
-            Image("")
+                
+            Image("Seasons")
                 .resizable()
                 .frame(width: 150, height: 150)
             
-            Text(".")
+            Text("Four Seasons Beijing. This hotel is celebrated for its impressive art collection and two Michelin-starred restaurants, offering a truly cosmopolitan experience. Located in the Liangmaqiao embassy district, it features a world-class wellness center and a sun-drenched pool area that serves as a quiet escape from the city.")
+                .font(.custom("Italic Text", size: 16))
             
             
             Spacer()
