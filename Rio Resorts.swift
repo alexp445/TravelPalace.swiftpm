@@ -8,7 +8,8 @@ struct  RioResorts: View {
                 .frame(alignment: .top)
             
             Divider()
-            
+            Text("Hotel Fasano Rio de Janeiro")
+                .font(.title2)
             Image("Fasano")
                 .resizable()
                 .frame(width: 150, height: 150)
@@ -17,7 +18,8 @@ struct  RioResorts: View {
                 .font(.custom("Italic Text", size: 17))
             
             Divider()
-                
+            Text("Grand Hyatt Rio de Janeiro")
+                .font(.title2)
             Image("Hyatt")
                 .resizable()
                 .frame(width: 150, height: 150)
