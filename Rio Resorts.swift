@@ -9,7 +9,7 @@ struct  RioResorts: View {
             
             Divider()
             Text("")
-                .font(.title)
+                .font(.title2)
             Image("")
                 .resizable()
                 .frame(width: 150, height: 150)
@@ -18,7 +18,7 @@ struct  RioResorts: View {
             
             Divider()
             Text("")
-                .font(.title)
+                .font(.title2)
             Image("")
                 .resizable()
                 .frame(width: 150, height: 150)
