@@ -3,7 +3,7 @@ struct  RioResorts: View {
     var body: some View {
         VStack{
             
-            Text("Rio de Janeiro Resorts:")
+            Text("Rio de Janeiro Resorts/Hotels:")
                 .font(.custom("HelveticaNeue-Bold", size: 45))
                 .frame(alignment: .top)
             
