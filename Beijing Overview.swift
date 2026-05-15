@@ -1,7 +1,20 @@
-//
-//  Beijing Overview.swift
-//  TravelPalace
-//
-//  Created by Alexander I. Pritsker on 5/15/26.
-//
+import SwiftUI
+struct BeijingOverview: View {
+    var body: some View {
+        VStack{
+            Text("Overview of Beijing:")
+                .font(.custom("HelveticaNeue-Bold", size: 41))
+                .frame(alignment: .top)
+                .padding(10)
+            
+            Divider()
+            
+            Text(".")
+                .font(.custom("Italic Text", size: 28))
+            
+            
+            Spacer()
+        }
 
+    }
+}
