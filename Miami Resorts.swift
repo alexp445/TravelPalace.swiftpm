@@ -9,7 +9,7 @@ struct MiamiResorts: View {
             
             Divider()
             Text("Faena Hotel Miami Beach")
-            .font(.largeTitle)
+                .font(.title)
             Image("faena")
                 .resizable()
                 .frame(width: 150, height: 150)
@@ -19,7 +19,7 @@ struct MiamiResorts: View {
             
             Divider()
             Text("Fontainebleau Miami Beach")
-            .font(.largeTitle)
+                .font(.title)
             Image("fontaine")
                 .resizable()
                 .frame(width: 150, height: 150)

@@ -9,7 +9,7 @@ struct TokyoResorts: View {
             
             Divider()
             Text("Mandarin Oriental Hotel")
-                .font(.largeTitle)
+                .font(.title)
             Image("Oriental")
                 .resizable()
                 .frame(width: 150, height: 150)
@@ -18,7 +18,7 @@ struct TokyoResorts: View {
             
             Divider()
             Text("Ritz-Carlton")
-                .font(.largeTitle)
+                .font(.title)
             Image("Ritz")
                 .resizable()
                 .frame(width: 150, height: 150)

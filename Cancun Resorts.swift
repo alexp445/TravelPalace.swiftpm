@@ -9,7 +9,7 @@ struct CancunResorts: View {
             
             Divider()
             Text("Waldorf Astoria Riviera Maya")
-            .font(.largeTitle)
+                .font(.title)
             Image("CancunResort")
                 .resizable()
                 .frame(width: 150, height: 150)
@@ -19,7 +19,7 @@ struct CancunResorts: View {
             
             Divider()
             Text("Krystal Cancun")
-            .font(.largeTitle)
+                .font(.title)
             Image("CancunResorts")
                 .resizable()
                 .frame(width: 150, height: 150)
