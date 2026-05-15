@@ -8,7 +8,8 @@ struct TokyoResorts: View {
                 .frame(alignment: .top)
             
             Divider()
-            
+            Text("Mandarin Oriental Hotel")
+                .font(.largeTitle)
             Image("Oriental")
                 .resizable()
                 .frame(width: 150, height: 150)
@@ -16,7 +17,8 @@ struct TokyoResorts: View {
             Text("Perched high above the city, this hotel offers some of the most spectacular views of Tokyo and Mount Fuji. It features ten world-class restaurants and a globally acclaimed spa, providing a serene escape in the heart of the Nihonbashi business district.")
             
             Divider()
-                
+            Text("Ritz-Carlton")
+                .font(.largeTitle)
             Image("Ritz")
                 .resizable()
                 .frame(width: 150, height: 150)

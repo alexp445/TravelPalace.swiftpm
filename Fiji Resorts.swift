@@ -8,7 +8,8 @@ struct FijiResorts: View {
                 .frame(alignment: .top)
             
             Divider()
-            
+            Text("")
+            .font(.largeTitle)
             Image("")
                 .resizable()
                 .frame(width: 150, height: 150)
@@ -16,7 +17,8 @@ struct FijiResorts: View {
             Text(".")
             
             Divider()
-                
+            Text("")
+            .font(.largeTitle)
             Image("")
                 .resizable()
                 .frame(width: 150, height: 150)
