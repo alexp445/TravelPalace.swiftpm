@@ -8,7 +8,8 @@ struct LondonResorts: View {
                 .padding(10)
             
             Divider()
-            
+            Text("Locke London Canary Wharf")
+            .font(.largeTitle)
             Image("LondonHotel1")
                 .resizable()
                 .frame(width: 150, height: 150)
@@ -17,7 +18,8 @@ struct LondonResorts: View {
             
             
             Divider()
-            
+            Text("Z Hotel Trafalgar")
+            .font(.largeTitle)
             Image("ZHotel")
                 .resizable()
                 .frame(width: 150, height: 150)

@@ -8,7 +8,8 @@ struct RomeResorts: View {
                 .padding(10)
             
             Divider()
-            
+            Text("Parco dei Principi Grand Hotel & SPA")
+                .font(.largeTitle)
             Image("RomeResort")
                 .resizable()
                 .frame(width: 150, height: 150)
@@ -17,7 +18,8 @@ struct RomeResorts: View {
             
             
             Divider()
-            
+            Text("Villa Agrippina Gran Meliá")
+                .font(.largeTitle)
             Image("RomeResorts")
                 .resizable()
                 .frame(width: 150, height: 150)
