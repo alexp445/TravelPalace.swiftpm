@@ -12,6 +12,7 @@ struct City: Identifiable {
 }
 @available(iOS 17.0, *)
 struct MapView: View {
+    @State private var itinerary = VacationItinerary()
     @State var address: String = ""
     @State var cameraPosition: MapCameraPosition = .region(
         MKCoordinateRegion(
@@ -145,14 +146,16 @@ struct MapView: View {
                                 .clipShape(Circle())
                                 .foregroundStyle(.gray)
                         }
-                        
+                        .environment(itinerary)
                         .sheet(item: $selectedCity) { city in
                             CityPageView (city: city)
+                                .environment(itinerary)
                         }
                         
                     }
                 }
             }
+            
             
             
             
@@ -181,7 +184,7 @@ struct MapView: View {
 @available(iOS 17.0, *)
 struct CityPageView: View {
     let city: City
-    
+    @Environment(VacationItinerary.self) private var itinerary
     var body: some View {
         NavigationStack {
             VStack(spacing: 20) {
@@ -217,6 +220,9 @@ struct CityPageView: View {
             }
             .navigationTitle("City Guide")
             .navigationBarTitleDisplayMode(.inline)
+            .onAppear {
+                itinerary.cityName = city.name
+            }
         }
     }
 }
