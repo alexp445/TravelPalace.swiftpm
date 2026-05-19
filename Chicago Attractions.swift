@@ -9,19 +9,19 @@ struct  ChicagoAttractions: View {
             
             Divider()
             
-            Image("")
+            Image("Bean")
                 .resizable()
-                .frame(width: 150, height: 150)
+                .frame(width: 190, height: 150)
             
-            Text(".")
+            Text("Chicago is a major city on Lake Michigan known for its impressive skyline, deep-dish pizza, rich music scene, and cultural attractions. It’s one of the largest and most influential cities in the United States.")
             
             Divider()
                 
-            Image("")
+            Image("SoldierField")
                 .resizable()
-                .frame(width: 150, height: 150)
+                .frame(width: 270, height: 150)
             
-            Text(".")
+            Text("Soldier Field is a historic stadium in Chicago and the home of the Chicago Bears. Known for its classic columns and lakefront location, it hosts football games, concerts, and other major events.")
             
             
             Spacer()
