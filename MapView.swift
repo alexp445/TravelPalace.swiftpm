@@ -77,7 +77,13 @@ struct MapView: View {
              description: "Dynasties and Grandeur.",
              descriptionPage: AnyView(BeijingOverview()),
              attractionsPage: AnyView(BeijingAttractions()),
-             resortsPage: AnyView(BeijingResorts()))
+             resortsPage: AnyView(BeijingResorts())),
+        City(name: "Chicago",
+             coordinate: CLLocationCoordinate2D(latitude: 39.916668, longitude: 116.383331),
+             description: "Dynasties and Grandeur.",
+             descriptionPage: AnyView(ChicagoOverview()),
+             attractionsPage: AnyView(ChicagoAttractions()),
+             resortsPage: AnyView(ChicagoResorts())),
     ]
     @State var myManager = LocationManager()
     @State var zoomLevel: Double = 120.0
