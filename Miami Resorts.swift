@@ -5,6 +5,13 @@ struct MiamiResorts: View {
     var body: some View {
         ScrollView{
             VStack{
+                
+                Text("\(itinerary.cityName) Resorts/Hotels:")
+                    .font(.custom("HelveticaNeue-Bold", size: 35))
+                    .multilineTextAlignment(.center)
+                    .padding(.top)
+                
+                Divider()
                 Text("Miami Resorts/Hotels:")
                     .font(.custom("HelveticaNeue-Bold", size: 35))
                     .frame(alignment: .top)
