@@ -21,6 +21,7 @@ struct MapView: View {
         )
     )
     let locations = [
+        
         City(name: "Miami",
              coordinate: CLLocationCoordinate2D(latitude: 25.7617, longitude: -80.1918),
              description: "Beaches and Art Deco.",
@@ -82,6 +83,7 @@ struct MapView: View {
              descriptionPage: AnyView(BeijingOverview()),
              attractionsPage: AnyView(BeijingAttractions()),
              resortsPage: AnyView(BeijingResorts())),
+        
         City(name: "Chicago",
              coordinate: CLLocationCoordinate2D(latitude: 41.881832, longitude: -87.623177),
              description: "Windy City",

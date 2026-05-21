@@ -1,9 +1,16 @@
 import SwiftUI
+@available(iOS 17.0, *)
 struct  RioResorts: View {
+    @Environment(VacationItinerary.self) private var itinerary
+    
     var body: some View {
         ScrollView{
             VStack{
-                
+                Text("\(itinerary.cityName) Resorts/Hotels:")
+                        .font(.custom("HelveticaNeue-Bold", size: 35))
+                        .multilineTextAlignment(.center)
+                        .padding(.top)
+                Divider()
                 Text("Rio Resorts/Hotels:")
                     .font(.custom("HelveticaNeue-Bold", size: 40))
                     .frame(alignment: .top)
