@@ -11,11 +11,7 @@ struct FijiResorts: View {
                        .multilineTextAlignment(.center)
                        .padding(.top)
                 Divider()
-                Text("Fiji Resorts/Hotels:")
-                    .font(.custom("HelveticaNeue-Bold", size: 45))
-                    .frame(alignment: .top)
-                
-                Divider()
+               
                 Text("Castaway Island Fiji")
                     .font(.title2)
                 Image("FijiResort")

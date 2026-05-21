@@ -11,12 +11,7 @@ struct RomeResorts: View {
                     .multilineTextAlignment(.center)
                     .padding(.top)
                 Divider()
-                Text("Rome Resorts/Hotels:")
-                    .font(.custom("HelveticaNeue-Bold", size: 35))
-                    .frame(alignment: .top)
-                    .padding(10)
                 
-                Divider()
                 Text("Parco dei Principi Grand Hotel & SPA")
                     .font(.title2)
                 Image("RomeResort")

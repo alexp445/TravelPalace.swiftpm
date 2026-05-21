@@ -11,11 +11,7 @@ struct TokyoResorts: View {
                         .multilineTextAlignment(.center)
                         .padding(.top)
                 Divider()
-                Text("Tokyo Hotels:")
-                    .font(.custom("HelveticaNeue-Bold", size: 45))
-                    .frame(alignment: .top)
                 
-                Divider()
                 Text("Mandarin Oriental Hotel")
                     .font(.title2)
                 Image("Oriental")

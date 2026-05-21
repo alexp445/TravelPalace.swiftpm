@@ -11,11 +11,6 @@ struct  RioResorts: View {
                         .multilineTextAlignment(.center)
                         .padding(.top)
                 Divider()
-                Text("Rio Resorts/Hotels:")
-                    .font(.custom("HelveticaNeue-Bold", size: 40))
-                    .frame(alignment: .top)
-                
-                Divider()
                 Text("Hotel Fasano Rio de Janeiro")
                     .font(.title2)
                 Image("Fasano")

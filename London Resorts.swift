@@ -10,11 +10,6 @@ struct LondonResorts: View {
                     .font(.custom("HelveticaNeue-Bold", size: 35))
                     .multilineTextAlignment(.center)
                     .padding(.top)
-                Text("London Resorts/Hotels:")
-                    .font(.custom("HelveticaNeue-Bold", size: 32))
-                    .frame(alignment: .top)
-                    .padding(10)
-                
                 Divider()
                 Text("Locke London Canary Wharf")
                     .font(.title2)

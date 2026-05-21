@@ -11,12 +11,8 @@ struct CancunResorts: View {
                     .multilineTextAlignment(.center)
                     .padding(.top)
                 Divider()
-                Text("Cancun Resorts/Hotels:")
-                    .font(.custom("HelveticaNeue-Bold", size: 33))
-                    .frame(alignment: .top)
-                    .padding(10)
+ 
                 
-                Divider()
                 Text("Waldorf Astoria Riviera Maya")
                     .font(.title2)
                 Image("CancunResort")

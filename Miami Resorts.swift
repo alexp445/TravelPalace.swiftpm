@@ -12,12 +12,7 @@ struct MiamiResorts: View {
                     .padding(.top)
                 
                 Divider()
-                Text("Miami Resorts/Hotels:")
-                    .font(.custom("HelveticaNeue-Bold", size: 35))
-                    .frame(alignment: .top)
-                    .padding(10)
                 
-                Divider()
                 Text("Faena Hotel Miami Beach")
                     .font(.title2)
                 Image("faena")

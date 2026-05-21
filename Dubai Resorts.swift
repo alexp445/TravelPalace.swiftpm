@@ -11,12 +11,6 @@ struct DubaiResorts: View {
                     .multilineTextAlignment(.center)
                     .padding(.top)
                 Divider()
-                Text("Dubai Resorts/Hotels:")
-                    .font(.custom("HelveticaNeue-Bold", size: 35))
-                    .frame(alignment: .top)
-                    .padding(10)
-                
-                Divider()
                 Text("Waldorf Astoria Dubai Palm Jumeirah Hotel")
                     .font(.title2)
                 Image("PalmHotel")

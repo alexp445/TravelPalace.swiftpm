@@ -12,12 +12,7 @@ struct ChicagoResorts: View {
                     .multilineTextAlignment(.center)
                     .padding(.top)
                 Divider()
-                Text("Chicago Resorts/Hotels:")
-                    .font(.custom("HelveticaNeue-Bold", size: 32))
-                    .frame(alignment: .top)
-                    .padding(10)
                 
-                Divider()
                 Text("Waldorf Astoria")
                     .font(.title2)
                 Image("Waldorf")

@@ -12,11 +12,6 @@ struct BeijingResorts: View {
                         .padding(.top)
                 Divider()
 
-                Text("Beijing Resorts/Hotels:")
-                    .font(.custom("HelveticaNeue-Bold", size: 45))
-                    .frame(alignment: .top)
-                
-                Divider()
                 Text("Mandarin Oriental Wangfujing Beijing Hotel")
                     .font(.title2)
                 Image("Mandarin")

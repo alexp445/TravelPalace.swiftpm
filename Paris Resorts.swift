@@ -10,12 +10,7 @@ struct  ParisResorts: View {
                 .multilineTextAlignment(.center)
                 .padding(.top)
             Divider()
-            Text("Paris Resorts/Hotels:")
-                .font(.custom("HelveticaNeue-Bold", size: 35))
-                .frame(alignment: .top)
-                .padding(10)
-            
-            Divider()
+           
             Text("The Peninsula Paris")
                 .font(.title2)
             Image("peninsula")
