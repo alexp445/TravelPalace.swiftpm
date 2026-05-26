@@ -13,6 +13,7 @@ struct FinishView: View {
                         .font(.title2)
                     VStack(alignment: .leading, spacing: 15) {
                         Text("📍 Destination: \(itinerary.cityName)")
+                        Text("🎡 Attraction: \(itinerary.attractionName)")
                         Text("🏨 Resort: \(itinerary.resortName)")
                     }
                     .font(.title3)
