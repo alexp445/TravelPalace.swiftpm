@@ -9,24 +9,24 @@ struct IbizaResorts: View {
                     .padding(10)
                 
                 Divider()
-                Text("")
+                Text("Grand Palladium Select Palace Ibiza - All Inclusive")
                     .font(.title2)
-                Image("")
+                Image("Resort")
                     .resizable()
                     .frame(width: 150, height: 150)
                 
-                Text(".")
+                Text("Vibrant pools amid parkland create a luxurious playground for all. Exceptional chefs prepare seafood and Mediterranean cuisine across eight restaurants, with beachside sunset views. Unwind in the spa's sauna or enjoy nightly entertainment from kids' discos to professional shows.")
                     .font(.custom("Italic Text", size: 14))
                 
                 
                 Divider()
-                Text("")
+                Text("Hotel Torre Del Mar")
                     .font(.title2)
-                Image("")
+                Image("Image")
                     .resizable()
                     .frame(width: 150, height: 150)
                 
-                Text(".")
+                Text("Panoramic sea views await at the outdoor pool with comfortable loungers and live music. The Sal Rossa Spa offers rejuvenating treatments including waterside massages. Two restaurants serve delicious cuisine with stunning seafront vistas, perfect after exploring nearby Ibiza Town or Playa Den Bossa.")
                     .font(.custom("Italic Text", size: 14))
                 
                 
