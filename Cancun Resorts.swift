@@ -22,6 +22,15 @@ struct CancunResorts: View {
                 Text("Serene ocean views frame every moment at this luxurious beachfront sanctuary with multiple pools and attentive service. The exceptional spa offers rejuvenating treatments. Evenings unfold at three restaurants where chefs transform fresh ingredients into culinary masterpieces.")
                     .font(.custom("Italic Text", size: 12))
                 
+                Button(action: {
+                                    itinerary.resortName = "Waldorf Astoria Riviera Maya"
+                                }) {
+                                    Text(itinerary.resortName == "Waldorf Astoria Riviera Maya" ? "Selected! ✓" : "Select Waldorf Astoria")
+                                        .bold()
+                                }
+                                .buttonStyle(.borderedProminent)
+                                .tint(itinerary.resortName == "Waldorf Astoria Riviera Maya" ? .green : .blue)
+                
                 Divider()
                 Text("Krystal Cancun")
                     .font(.title2)
@@ -35,7 +44,14 @@ struct CancunResorts: View {
                 
                 
                 
-                
+                Button(action: {
+                                    itinerary.resortName = "Krystal Cancun"
+                                }) {
+                                    Text(itinerary.resortName == "Krystal Cancun" ? "Selected! ✓" : "Select Krystal Cancun")
+                                        .bold()
+                                }
+                                .buttonStyle(.borderedProminent)
+                                .tint(itinerary.resortName == "Krystal Cancun" ? .green : .blue)
                 
                 
                 

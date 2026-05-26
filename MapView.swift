@@ -103,7 +103,14 @@ struct MapView: View {
              description: "Coastal Beauty.",
              descriptionPage: AnyView(IbizaOverview()),
              attractionsPage: AnyView(IbizaAttractions()),
-             resortsPage: AnyView(IbizaResorts()))
+             resortsPage: AnyView(IbizaResorts())),
+        
+        City(name: "Bogotà",
+             coordinate: CLLocationCoordinate2D(latitude: 4.624335, longitude: -74.063644),
+             description: "Mountains and Food.",
+             descriptionPage: AnyView(BogotàOverview()),
+             attractionsPage: AnyView(BogotàAttractions()),
+             resortsPage: AnyView(BogotàResorts()))
     ]
     @State var myManager = LocationManager()
     @State var zoomLevel: Double = 120.0

@@ -21,7 +21,16 @@ struct FijiResorts: View {
                 Text("Castaway Island, 4-star Mamanuca private island resort featuring 66 traditional, TV-free beachfront bures. Perfect for families and couples alike, it offers four oceanfront restaurants, separate family and adultsv only pools, a free kids' club, and a day spa.")
                     .font(.custom("Italic Text", size: 12))
                 Divider()
-                Text("Radisson Blue Resort Fiji Denarau Island")
+                Button(action: {
+                                        itinerary.resortName = "Castaway Island Fiji"
+                                    }) {
+                                        Text(itinerary.resortName == "Castaway Island Fiji" ? "Selected! ✓" : "Select Castaway Island")
+                                            .bold()
+                                    }
+                                    .buttonStyle(.borderedProminent)
+                                    .tint(itinerary.resortName == "Castaway Island Fiji" ? .green : .blue)
+                
+                Text("Radisson Blu Resort Fiji Denarau Island")
                     .font(.title2)
                 Image("fijiResorts")
                     .resizable()
@@ -30,10 +39,16 @@ struct FijiResorts: View {
                 Text("Near Port Denarau, Radisson Blu Resort Fiji Denarau Island provides a swim-up bar, a poolside bar, and a grocery/convenience store. With a private beach, beachfront dining, and beach massages, this resort is the perfect place to soak up some sun.")
                     .font(.custom("Italic Text", size: 12))
                 
+                Button(action: {
+                                        itinerary.resortName = "Radisson Blu Resort Fiji"
+                                    }) {
+                                        Text(itinerary.resortName == "Radisson Blu Resort Fiji" ? "Selected! ✓" : "Select Radisson Blu")
+                                            .bold()
+                                    }
+                                    .buttonStyle(.borderedProminent)
+                                    .tint(itinerary.resortName == "Radisson Blu Resort Fiji" ? .green : .blue)
+                                }
                 Spacer()
             }
         }
     }
-    
-    
-}

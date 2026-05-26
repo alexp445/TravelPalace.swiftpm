@@ -8,8 +8,7 @@ struct DubaiResorts: View {
             VStack{
                 Text("\(itinerary.cityName) Resorts/Hotels:")
                     .font(.custom("HelveticaNeue-Bold", size: 35))
-                    .multilineTextAlignment(.center)
-                    .padding(.top)
+
                 Divider()
                 Text("Waldorf Astoria Dubai Palm Jumeirah Hotel")
                     .font(.title2)
@@ -20,6 +19,14 @@ struct DubaiResorts: View {
                 Text("Waldorf Astoria Dubai Palm Jumeirah is located on the eastern crescent of the Palm, this resort offers a more serene and sophisticated atmosphere compared to the larger entertainment-focused hotels nearby. Private Beach that features a 200-meter private beach with soft white sand and calm waters. Also with an elegant design with hermal relaxation rooms and a wide range of signature treatments.")
                     .font(.custom("Italic Text", size: 12))
                 
+                Button(action: {
+                                    itinerary.resortName = "Waldorf Astoria Dubai"
+                                }) {
+                                    Text(itinerary.resortName == "Waldorf Astoria Dubai" ? "Selected! ✓" : "Select Waldorf Astoria")
+                                        .bold()
+                                }
+                                .buttonStyle(.borderedProminent)
+                                .tint(itinerary.resortName == "Waldorf Astoria Dubai" ? .green : .blue)
                 
                 Divider()
                 Text("Atlantis, The Palm")
@@ -33,12 +40,15 @@ struct DubaiResorts: View {
                 
                 
                 
-                
-                
-                
-                
-                
-                
+                Button(action: {
+                                    itinerary.resortName = "Atlantis, The Palm"
+                                }) {
+                                    Text(itinerary.resortName == "Atlantis, The Palm" ? "Selected! ✓" : "Select Atlantis, The Palm")
+                                        .bold()
+                                }
+                                .buttonStyle(.borderedProminent)
+                                .tint(itinerary.resortName == "Atlantis, The Palm" ? .green : .blue)
+            
                 
                 
                 Spacer()

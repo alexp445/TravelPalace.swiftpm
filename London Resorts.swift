@@ -20,6 +20,15 @@ struct LondonResorts: View {
                 Text("Locke London Canary Wharf is a modern aparthotel offering stylish studios and suites with kitchens, living spaces, and contemporary design. The hotel features panoramic city views, a rooftop restaurant and bar, fitness facilities, and coworking spaces, making it ideal for both business and travelers.")
                     .font(.custom("Italic Text", size: 12))
                 
+                Button(action: {
+                                    itinerary.resortName = "Locke London Canary Wharf"
+                                }) {
+                                    Text(itinerary.resortName == "Locke London Canary Wharf" ? "Selected! ✓" : "Select Locke London")
+                                        .bold()
+                                }
+                                .buttonStyle(.borderedProminent)
+                                .tint(itinerary.resortName == "Locke London Canary Wharf" ? .green : .blue)
+                
                 Divider()
                 Text("Z Hotel Trafalgar")
                     .font(.title2)
@@ -34,7 +43,14 @@ struct LondonResorts: View {
                 
                 
                 
-                
+                Button(action: {
+                                    itinerary.resortName = "Z Hotel Trafalgar"
+                                }) {
+                                    Text(itinerary.resortName == "Z Hotel Trafalgar" ? "Selected! ✓" : "Select Z Hotel")
+                                        .bold()
+                                }
+                                .buttonStyle(.borderedProminent)
+                                .tint(itinerary.resortName == "Z Hotel Trafalgar" ? .green : .blue)
                 
                 
                 

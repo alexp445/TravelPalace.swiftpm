@@ -1,5 +1,7 @@
 import SwiftUI
+@available(iOS 17.0, *)
 struct FijiAttractions: View {
+    @Environment(VacationItinerary.self) private var itinerary
     var body: some View {
         ScrollView{
             VStack{
@@ -16,6 +18,15 @@ struct FijiAttractions: View {
                 
                 Text("Fiji’s beaches offer a quintessential paradise of white sand and turquoise water, with the best stretches found on its outer islands. The Mamanucas feature postcard-perfect resort shores, the Yasawas boast dramatic backdrops like the Blue Lagoon, and the mainland offers the stunning, accessible crescent of Natadola Beach.")
                 
+                Button(action: {
+                                    itinerary.attractionName = "Fiji Beaches"
+                                }) {
+                                    Text(itinerary.attractionName == "Fiji Beaches" ? "Selected! ✓" : "Select Fiji Beaches")
+                                        .bold()
+                                }
+                                .buttonStyle(.borderedProminent)
+                                .tint(itinerary.attractionName == "Fiji Beaches" ? .green : .blue)
+                
                 Divider()
                 
                 Image("FijiGarden")
@@ -24,6 +35,14 @@ struct FijiAttractions: View {
                 
                 Text("The Garden of the Sleeping Giant is a lush tropical park nestled at the foot of Fiji's Sabeto Mountains. Originally founded in 1977 by actor Raymond Burr to house his private collection, the garden features more than 2,000 varieties of exotic orchids. Shaded boardwalks guide visitors through native rainforest, lily ponds, and manicured lawns, offering a serene nature escape just minutes from Nadi.")
                 
+                Button(action: {
+                                    itinerary.attractionName = "Garden of the Sleeping Giant"
+                                }) {
+                                    Text(itinerary.attractionName == "Garden of the Sleeping Giant" ? "Selected! ✓" : "Select The Garden")
+                                        .bold()
+                                }
+                                .buttonStyle(.borderedProminent)
+                                .tint(itinerary.attractionName == "Garden of the Sleeping Giant" ? .green : .blue)
                 
                 Spacer()
             }

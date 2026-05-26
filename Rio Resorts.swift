@@ -20,6 +20,15 @@ struct  RioResorts: View {
                 Text("Located in the heart of Ipanema, this chic hotel is renowned for its sleek 1950s-inspired design and its stunning rooftop infinity pool. It offers a private beach area and sophisticated service, making it a favorite for those seeking a stylish, modern vibe.")
                     .font(.custom("Italic Text", size: 15))
                 
+                Button(action: {
+                                    itinerary.resortName = "Hotel Fasano Rio de Janeiro"
+                                }) {
+                                    Text(itinerary.resortName == "Hotel Fasano Rio de Janeiro" ? "Selected! ✓" : "Select Hotel Fasano")
+                                        .bold()
+                                }
+                                .buttonStyle(.borderedProminent)
+                                .tint(itinerary.resortName == "Hotel Fasano Rio de Janeiro" ? .green : .blue)
+                
                 Divider()
                 Text("Grand Hyatt Rio de Janeiro")
                     .font(.title2)
@@ -30,6 +39,14 @@ struct  RioResorts: View {
                 Text("Situated between the Atlantic Ocean and Marapendi Lagoon in Barra da Tijuca, this resort-style hotel offers a more secluded atmosphere. It features three specialty restaurants, a world-class spa, and expansive outdoor pools surrounded by lush greenery.")
                     .font(.custom("Italic Text", size: 15))
                 
+                Button(action: {
+                                    itinerary.resortName = "Grand Hyatt Rio de Janeiro"
+                                }) {
+                                    Text(itinerary.resortName == "Grand Hyatt Rio de Janeiro" ? "Selected! ✓" : "Select Grand Hyatt")
+                                        .bold()
+                                }
+                                .buttonStyle(.borderedProminent)
+                                .tint(itinerary.resortName == "Grand Hyatt Rio de Janeiro" ? .green : .blue)
                 
                 Spacer()
             }

@@ -22,6 +22,15 @@ struct MiamiResorts: View {
                 Text("Faena Miami Beach accommodations are designed to blur the line between dreams and reality. Enter a world of glamor and spohistication, one that expands the imagination and cradlesthe spirit in comfort.")
                     .font(.custom("Italic Text", size: 12))
                 
+                Button(action: {
+                                    itinerary.resortName = "Faena Hotel Miami Beach"
+                                }) {
+                                    Text(itinerary.resortName == "Faena Hotel Miami Beach" ? "Selected! ✓" : "Select Faena Hotel")
+                                        .bold()
+                                }
+                                .buttonStyle(.borderedProminent)
+                                .tint(itinerary.resortName == "Faena Hotel Miami Beach" ? .green : .blue)
+                
                 Divider()
                 Text("Fontainebleau Miami Beach")
                     .font(.title2)
@@ -35,7 +44,14 @@ struct MiamiResorts: View {
                 
                 
                 
-                
+                Button(action: {
+                                    itinerary.resortName = "Fontainebleau Miami Beach"
+                                }) {
+                                    Text(itinerary.resortName == "Fontainebleau Miami Beach" ? "Selected! ✓" : "Select Fontainebleau")
+                                        .bold()
+                                }
+                                .buttonStyle(.borderedProminent)
+                                .tint(itinerary.resortName == "Fontainebleau Miami Beach" ? .green : .blue)
                 
                 
                 

@@ -21,6 +21,15 @@ struct RomeResorts: View {
                 Text("A tranquil oasis awaits within Villa Borghese park, where the 25-meter indoor pool and spa provide perfect rejuvenation after sightseeing. Guests can savor delicious cuisine at the on site restaurant while attentive staff deliver exceptional, warm service.")
                     .font(.custom("Italic Text", size: 12))
                 
+                Button(action: {
+                                    itinerary.resortName = "Parco dei Principi Grand Hotel"
+                                }) {
+                                    Text(itinerary.resortName == "Parco dei Principi Grand Hotel" ? "Selected! ✓" : "Select Parco dei Principi")
+                                        .bold()
+                                }
+                                .buttonStyle(.borderedProminent)
+                                .tint(itinerary.resortName == "Parco dei Principi Grand Hotel" ? .green : .blue)
+                
                 Divider()
                 Text("Villa Agrippina Gran Meliá")
                     .font(.title2)
@@ -35,7 +44,14 @@ struct RomeResorts: View {
                 
                 
                 
-                
+                Button(action: {
+                                    itinerary.resortName = "Villa Agrippina Gran Meliá"
+                                }) {
+                                    Text(itinerary.resortName == "Villa Agrippina Gran Meliá" ? "Selected! ✓" : "Select Villa Agrippina")
+                                        .bold()
+                                }
+                                .buttonStyle(.borderedProminent)
+                                .tint(itinerary.resortName == "Villa Agrippina Gran Meliá" ? .green : .blue)
                 
                 
                 

@@ -22,6 +22,14 @@ struct ChicagoResorts: View {
                 Text("Our downtown Chicago Gold Coast hotel is positioned to explore Rush Street and the Magnificent Mile. Choose from elegant guest suites featuring fireplaces or private terraces with city vistas. Our attentive concierge ensures a tailored experience. Enjoy our Forbes-rated spa, lap pool, and diverse dining and drinking options.")
                     .font(.custom("Italic Text", size: 14))
                 
+                Button(action: {
+                                    itinerary.resortName = "Waldorf Astoria Chicago"
+                                }) {
+                                    Text(itinerary.resortName == "Waldorf Astoria Chicago" ? "Selected! ✓" : "Select Waldorf Astoria")
+                                        .bold()
+                                }
+                                .buttonStyle(.borderedProminent)
+                                .tint(itinerary.resortName == "Waldorf Astoria Chicago" ? .green : .blue)
                 
                 Divider()
                 Text("Sable at Navy Pier Chicago, Curio Collection by Hilton")
@@ -36,8 +44,14 @@ struct ChicagoResorts: View {
                 
                 
                 
-                
-                
+                Button(action: {
+                                    itinerary.resortName = "Sable at Navy Pier Chicago"
+                                }) {
+                                    Text(itinerary.resortName == "Sable at Navy Pier Chicago" ? "Selected! ✓" : "Select Sable at Navy Pier")
+                                        .bold()
+                                }
+                                .buttonStyle(.borderedProminent)
+                                .tint(itinerary.resortName == "Sable at Navy Pier Chicago" ? .green : .blue)
                 
                 
                 

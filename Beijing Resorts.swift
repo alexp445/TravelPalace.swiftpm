@@ -21,6 +21,15 @@ struct BeijingResorts: View {
                 Text("Located in the heart of the city's premier shopping district, this boutique-style hotel features some of the largest rooms in Beijing and a stunning rooftop terrace with direct views of the Forbidden City. It offers a perfect blend of modern luxury and intimate service, including a top-tier spa and refined dining options.")
                     .font(.custom("Italic Text", size: 12))
                 
+                Button(action: {
+                                    itinerary.resortName = "Mandarin Oriental Wangfujing"
+                                }) {
+                                    Text(itinerary.resortName == "Mandarin Oriental Wangfujing" ? "Selected! ✓" : "Select Mandarin Oriental")
+                                        .bold()
+                                }
+                                .buttonStyle(.borderedProminent)
+                                .tint(itinerary.resortName == "Mandarin Oriental Wangfujing" ? .green : .blue)
+                
                 Divider()
                 Text("Four Seasons Beijing. ")
                     .font(.title2)
@@ -31,6 +40,14 @@ struct BeijingResorts: View {
                 Text("This hotel is celebrated for its impressive art collection and two Michelin-starred restaurants, offering a truly cosmopolitan experience. Located in the Liangmaqiao embassy district, it features a world-class wellness center and a sun-drenched pool area that serves as a quiet escape from the city.")
                     .font(.custom("Italic Text", size: 12))
                 
+                Button(action: {
+                                    itinerary.resortName = "Four Seasons Beijing"
+                                }) {
+                                    Text(itinerary.resortName == "Four Seasons Beijing" ? "Selected! ✓" : "Select Four Seasons")
+                                        .bold()
+                                }
+                                .buttonStyle(.borderedProminent)
+                                .tint(itinerary.resortName == "Four Seasons Beijing" ? .green : .blue)
                 
                 Spacer()
             }
